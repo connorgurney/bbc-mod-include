@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title>ssi flastmod test</title>
+	</head>
+	<body>
+		<h1>ssi flastmod test</h1>
+		<!--#func var="ok" func="flastmod" file="flastmod.shtml" -->
+                ok=flastmod(flastmod.shtml) = <!--#echo var="ok" --><br>
+		<!--#func var="fail" func="flastmod" file="nofile.shtml" -->
+                fail=flastmod(nofile.shtml) = <!--#echo var="fail" -->
+	</body>
+</html>

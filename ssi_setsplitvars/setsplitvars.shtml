@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>ssi setsplivars test</title>
+	</head>
+	<body>
+		<h1>ssi setsplitvars test</h1>
+		<!--#setsplitvars value="world=hello" -->
+		"hello=world" world = <!--#echo var="world" --><br>
+		<!--#setsplitvars value="one=two&two=three" -->
+		"one=two&two=three" one = <!--#echo var="one" -->, two = <!--#echo var="two" --><br>
+		<!--#setsplitvars value="five&six=" -->
+		"five&six=" five = <!--#echo var="five" -->, six = <!--#echo var="six" --><br>
+		<!--#setsplitvars value="QUERY_STRING=blub" -->
+		"QUERY_STRING=blub" QUERY_STRING = <!--#echo var="QUERY_STRING" --><br>
+		<!--#setsplitvars allow="QUERY_STRING" value="QUERY_STRING=blub" -->
+		allow="QUERY_STRING" "QUERY_STRING=blub" QUERY_STRING = <!--#echo var="QUERY_STRING" --><br>
+		note: you might want to try: <a href="setsplitvars.shtml?QUERY_STRING=hello">this</a><br>
+		<!--#setsplitvars delimiter=":" value="eight=8:nine=9" -->
+		delimiter=":" "eight=8:nine=9" eight = <!--#echo var="eight" -->, nine = <!--#echo var="nine" --><br>
+		FIXME , test url/html encoding
+
+	</body>
+</html>

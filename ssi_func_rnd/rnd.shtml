@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>ssi rnd test</title>
+	</head>
+	<body>
+		<h1>ssi rnd test</h1>
+		<!--#func var="rnd" func="random" min="1" max="3" item="red" item="green" item="blue" -->
+		random(1,3,red,green,blue)=<!--#echo var="rnd" --><br>
+		<!--#func var="rnd" func="random" min="1" max="10" -->
+		random(1,10)=<!--#echo var="rnd" --><br>
+		<!--#func var="rnd" func="random" min="-4" max="0" item="red" item="green" item="blue" -->
+		random(-4,0,red,green,blue)=<!--#echo var="rnd" --><br>
+		<!--#func var="rnd" func="random" min="10" max="1" -->
+		random(10,1)=<!--#echo var="rnd" --><br>
+		<!--#func var="rnd" func="random" min="0" max="0" -->
+		random(0,0)=<!--#echo var="rnd" --><br>
+		<!--#func var="rnd" func="random" min="-2" max="2" -->
+		random(-2,2)=<!--#echo var="rnd" --><br>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>ssi math test</title>
+	</head>
+	<body>
+		<h1>ssi math test</h1>
+		<!--#func var="sum" func="add" value="3" -->
+		sum=add(3)=<!--#echo var="sum" --><br>
+		<!--#func var="sum" func="add" value="${sum}" value="-1" -->
+		sum=add($sum,-1)=<!--#echo var="sum" --><br>
+		<!--#func var="sum" func="add" value="${sum}" value="-1" value="2" value="3" -->
+		sum=add($sum,-1,2,3)=<!--#echo var="sum" --><br>
+
+		<!--#func var="cmp" func="cmp" a="${sum}" b="4" op="lt" -->
+		cmp($sum,4,lt)=<!--#echo var="cmp" --><br>
+		<!--#func var="cmp" func="cmp" a="${sum}" b="4" op="le" -->
+		cmp($sum,4,le)=<!--#echo var="cmp" --><br>
+		<!--#func var="cmp" func="cmp" a="${sum}" b="4" op="gt" -->
+		cmp($sum,4,gt)=<!--#echo var="cmp" --><br>
+		<!--#func var="cmp" func="cmp" a="${sum}" b="4" op="ge" -->
+		cmp($sum,4,ge)=<!--#echo var="cmp" --><br>
+		<!--#func var="cmp" func="cmp" a="${sum}" b="4" op="ne" -->
+		cmp($sum,4,ne)=<!--#echo var="cmp" --><br>
+		<!--#func var="cmp" func="cmp" a="${sum}" b="4" op="eq" -->
+		cmp($sum,4,eq)=<!--#echo var="cmp" --><br>
+
+		<!--#func var="neg" func="neg" value="${sum}" -->
+		neg=neg($sum)=<!--#echo var="neg" --><br>
+
+		<!--#func var="mult" func="mult" value="${sum}" value="2" -->
+		mult=mult($sum,2)=<!--#echo var="mult" --><br>
+		<!--#func var="mult" func="mult" value="${sum}" value="2" value="${neg}" -->
+		mult=mult($sum,2,$neg)=<!--#echo var="mult" --><br>
+
+		<!--#func var="div" func="div" value="${mult}" value="2" -->
+		div=div($mult,2)=<!--#echo var="div" --><br>
+		<!--#func var="div" func="div" value="${mult}" value="-2" value="${sum}" -->
+		div=div($mult,-2,$sum)=<!--#echo var="div" --><br>
+
+		<!--#func var="mod" func="mod" value="${mult}" value="2" -->
+		mod($mult,2)=<!--#echo var="mod" --><br>
+		<!--#func var="mod" func="mod" value="${mult}" value="${neg}" value="7" -->
+		mod($mult,$neg,7)=<!--#echo var="mod" -->
+	</body>
+</html>
